@@ -1,3 +1,3 @@
 module ake-your-game-score-handling
 
-go 1.21
+go 1.18
