@@ -9,8 +9,7 @@ import (
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
-
+		port = "3000"
 	}
 	http.HandleFunc("/score", scoreHandler)
 	http.HandleFunc("/score/", scoreHandler)
