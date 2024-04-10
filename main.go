@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 )
@@ -15,6 +16,6 @@ func main() {
 	http.HandleFunc("/score/", scoreHandler)
 	http.HandleFunc("/rank", rankHandler)
 	http.HandleFunc("/", ping)
-	//fmt.Println("Starting server on port :8080")
+	fmt.Println("Starting server on port :" + port)
 	http.ListenAndServe(":"+port, nil)
 }
