@@ -8,6 +8,8 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-scores
+COPY db.txt ./
+
+RUN go build -o /docker-scores
 
 CMD ["/docker-scores"]
