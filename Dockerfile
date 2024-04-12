@@ -1,14 +1,12 @@
-FROM golang:1.19
+FROM golang:1.19-alpine
 
 WORKDIR /app
 
-COPY go.mod ./
+COPY go.mod .
 
 RUN go mod download
 
-COPY *.go ./
-
-COPY db.txt ./
+COPY . .
 
 RUN go build -o /docker-scores
 
